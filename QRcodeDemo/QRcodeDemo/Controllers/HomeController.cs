@@ -25,7 +25,7 @@ namespace QRcodeDemo.Controllers
             try
             {
                 qrcode.QRCodeImagePath = GenerateQRCode(qrcode.QRCodeText);
-                ViewBag.Message = "QR Code Created successfully";
+                ViewBag.Message = "QR Code Generated successfully";
             }
             catch (Exception ex)
             {
@@ -38,7 +38,7 @@ namespace QRcodeDemo.Controllers
         {
             string folderPath = "~/Images/";
             string imagePath = "~/Images/QrCode.jpg";
-            // If the directory doesn't exist then create it.
+            // create new Directory if not exist
             if (!Directory.Exists(Server.MapPath(folderPath)))
             {
                 Directory.CreateDirectory(Server.MapPath(folderPath));
@@ -74,7 +74,7 @@ namespace QRcodeDemo.Controllers
             string imagePath = "~/Images/QrCode.jpg";
             string barcodePath = Server.MapPath(imagePath);
             var barcodeReader = new BarcodeReader();
-
+            //Decode the image to text
             var result = barcodeReader.Decode(new Bitmap(barcodePath));
             if (result != null)
             {
