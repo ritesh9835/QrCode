@@ -1,1 +1,3 @@
-QRcodeDemo/QRcodeDemo/Scripts/* linguist-vendored
+/QRcodeDemo/QRcodeDemo/Scripts/* linguist-vendored
+/QRcodeDemo/.Vs/* linguist-vendored
+/QRcodeDemo/Packages/* linguist-vendored
